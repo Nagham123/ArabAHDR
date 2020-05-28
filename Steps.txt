@@ -1,0 +1,51 @@
+if someone downloaded my proj, please run npm install
+
+npm init -y
+
+change   "main": "index.js",in package.json
+to   "main": "server.js",
+
+install dependencies for express
+npm i express ejs express-ejs-layouts
+
+npm i --save -dev nodemon
+change     "test": "echo \"Error: no test specified\" && exit 1"
+in package.json 
+to
+ "start": "node server.js",
+ "devStart": "nodemon server.js"
+
+create server.js
+create views folder
+create public folder
+
+to start the server npm run devStart
+
+WE WILL USE MVC TO LAYOUT OUR APPLICATION 
+
+create routes folder (which is controller)
+create a folder called models where all our database are going
+
+in routes folder create index.js (we will setup all our routes here)
+
+create layouts folder in view, then layoyt.ejs in layouts folder
+
+make sure to download ejs language support in extensions for visual studio
+
+! and enter in layouts.ejs
+
+index.ejs inside views folder
+
+go to server.js to integrate mongodb to our app
+
+install mongodb library
+npm i mongoose
+
+then use a library .env which will allow us to load environment variables into our app
+npm i --save-dev dotenv 
+create .env file
+
+git init
+then create .gitignore file
+to add all the files we do not want to include in our git repository 
+
