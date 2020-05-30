@@ -49,3 +49,67 @@ git init
 then create .gitignore file
 to add all the files we do not want to include in our git repository 
 
+add to github:
+git add .
+git commit -m "initial setup"
+go to github
+create new repo
+give it a name and create 
+git remote add origin https://github.com/Nagham123/ArabAHDR.git
+
+now deploy to an actual server to view this on the internet 
+using heroku
+create new app
+follow steps for CLI
+download heroku cli
+open cmd not hyper or ..
+heroku -v
+heroku login 
+then after logging in 
+heroku git:remote -a arab-ahdr
+git push heroku master   (this will build our server)
+once done click on open app on the right corner 
+then click on reveal config variables 
+in the key input copy paste from .env file :   DATABASE_URL
+ as for the value input since we don't have a database on our server to access 
+we need to create a database separately from our server using mongoDB atlas 
+which is a free way we can create a DB for mongoDB
+create a cluster AWS using default setup 
+when done click connect 
+add a mongoDB user call it 
+click connect 
+username: Nagham 
+pass: 0ezHfx7JFfF9uga0
+then choose a connection method
+connect to an application
+paste link in value : 
+mongodb+srv://Nagham:<password>@cluster0-odduc.mongodb.net/test?retryWrites=true&w=majority
+and paste password in <password>
+mongodb+srv://Nagham:0ezHfx7JFfF9uga0@cluster0-odduc.mongodb.net/test?retryWrites=true&w=majority
+now refresh ur page: 
+https://arab-ahdr.herokuapp.com/
+
+add functionalities that allow us to create search and view authors in our app 
+create a route for our authors, our author controller 
+inside routes folder called authors.js
+
+in views folder create a new folder called authors
+inside it create index.ejs and new.ejs
+
+in the views folder create new folder called partials
+in partials create a file called header.ejs
+we are using partials beacause it allows you to break our 
+ejs files into smaller files, and it allows you to import these files 
+as multiple times into other files 
+
+go to models folder and create author.js
+this is a singular form of our routes 
+
+npm i body-parser
+this will make it easy to access our different elements from our actual server 
+
+now add the changes to git 
+git add .
+
+
+
